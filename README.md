@@ -26,20 +26,12 @@ Ce projet est une application web développée dans le cadre de l’épreuve **E
 - Vérification avec `password_verify()`
 - Gestion de session sécurisée avec `$_SESSION`
 
-## 📷 Captures d’écran
-
-*(Tu peux ajouter ici des captures d'écran du site : page d'accueil, formulaire, tableau de bord, etc.)*
-
 ## 🧱 Architecture MVC
 
 - `controllers/` – Logique des actions
 - `models/` – Requêtes SQL et gestion des données
 - `views/` – Affichage HTML
 - `config/` – Connexion BDD, paramètres globaux
-
-## 📁 Export PDF (bonus)
-
-Possibilité d’**exporter un récapitulatif PDF** de la demande de location via la bibliothèque `FPDF` (ou `TCPDF`).
 
 ## 🚀 Lancer le projet en local
 
