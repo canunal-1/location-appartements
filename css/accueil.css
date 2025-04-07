@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center; /* Centrer le contenu de l'en-tête */
+}
+
+header h1,
+header p {
+    margin: auto; /* Centrer le titre et le sous-titre */
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.appartements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.appartement {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); /* 3 items per row */
+}
+
+.appartement h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.appartement p {
+    margin-bottom: 5px;
+}
+
+.images {
+    margin-top: 20px;
+}
+
+.images img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.login-section {
+    position: absolute;
+    top: 20px; /* Ajustez cette valeur selon votre mise en page */
+    right: 20px; /* Ajustez cette valeur selon votre mise en page */
+}
+
+.login-section a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px; /* Ajoute une marge entre les liens */
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px; /* Ajustez cette valeur selon votre mise en page */
+}
+
+.descrCard
+{
+    text-align: center;
+}
+
+.notification{
+    color: black;
+    position: absolute;
+    top: 15px;
+    right: 275px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.notification a{
+    color: black;
+}
+
+.notification::after{
+    content: attr(counter);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: red;
+    top: 0px;
+    left: 50%;
+    border: 2px grey solid;
+    color: white;
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.notification-bar {
+    display: none;
+    position: absolute;
+    top: 100%; /* Cela positionnera la barre juste en dessous de la cloche */
+    right: 0;
+    width: 250px; /* Ajustez la largeur selon vos besoins */
+    background-color: #fff; /* Couleur de fond de la barre de notification */
+    border: 1px solid #ccc; /* Bordure de la barre de notification */
+    padding: 10px; /* Espace à l'intérieur de la barre de notification */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour la barre de notification */
+    z-index: 999; /* Assurez-vous que la barre est au-dessus des autres éléments */
+    color: #333;
+    font-weight: bold;
+}
+
+.msg-notif{
+    border: 1px solid black ;
+    margin: 10px;
+    padding: 10px;
+    color: black;
+}
+
+.msg-notif a{
+    color: black;
+    font-size: 14px;
+}

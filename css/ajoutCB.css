@@ -1,0 +1,48 @@
+.bank-account {
+    margin-top: 20px;
+}
+
+.bank-account h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.bank-account form {
+    margin-bottom: 20px;
+}
+
+.bank-account label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.bank-account input[type="text"],
+.bank-account input[type="number"] {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.bank-account button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bank-account button[type="submit"]:hover {
+    background-color: #444;
+}
+
+.bank-account a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+}
