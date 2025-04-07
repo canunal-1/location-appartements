@@ -42,15 +42,6 @@ CREATE TABLE `appartements` (
   `id_proprietaire` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `appartements`
---
-
-INSERT INTO `appartements` (`id_appartement`, `villeAppart`, `rue`, `arrondissement`, `etage`, `type`, `prix_loc`, `prix_charg`, `ascenceur`, `preavis`, `date_libre`, `id_proprietaire`) VALUES
-(1, 'Astoria', 'Rue des Étoiles', 'Quartier de l\'Aube', 2, 'T3', '1000.00', '300.00', 0, 1, '2025-03-29', 1),
-(2, 'Briseville', 'Rue du Clair de Lune', 'Quartier des Mélodies', 2, 'T3', '1500.00', '500.00', 0, 1, '2024-04-01', 1),
-(3, 'Sylvéria', 'Rue de l\'Arc-en-Ciel', 'Quartier des Songes', 70, 'T3', '2500.00', '1000.00', 1, 1, '2025-04-10', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -62,13 +53,6 @@ CREATE TABLE `banque` (
   `code_banque` varchar(50) DEFAULT NULL,
   `id_locataire` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `banque`
---
-
-INSERT INTO `banque` (`id_banque`, `code_banque`, `id_locataire`) VALUES
-(26, '123456', 9);
 
 -- --------------------------------------------------------
 
@@ -89,13 +73,6 @@ CREATE TABLE `demandeur` (
   `id_appartement` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `demandeur`
---
-
-INSERT INTO `demandeur` (`id_dem`, `nom_dem`, `prenom_dem`, `adresse_dem`, `ville_dem`, `codeville_dem`, `tel_dem`, `code_dem`, `decision`, `id_appartement`) VALUES
-(57, 'unal', 'can', '35 allée des platanes', 'Les Pavillons-sous-bois', 93320, '0767470436', 'ASV3QCL9TD', NULL, 3);
-
 -- --------------------------------------------------------
 
 --
@@ -107,18 +84,6 @@ CREATE TABLE `image` (
   `chemin_image` varchar(50) DEFAULT NULL,
   `id_appartement` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `image`
---
-
-INSERT INTO `image` (`id_image`, `chemin_image`, `id_appartement`) VALUES
-(1, 'image/media-190.jpg', 1),
-(2, 'image/Eclipse-Tower-2.png', 1),
-(3, 'image/villa_franklin_2.jpg', 2),
-(4, 'image/villa_franklin_3.jpg', 2),
-(5, 'image/843f27-Screenshot (61).jpg', 3),
-(6, 'image/MazeBankTower-GTAV-Overview-1.png', 3);
 
 -- --------------------------------------------------------
 
@@ -136,13 +101,6 @@ CREATE TABLE `locataires` (
   `telLoc` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `locataires`
---
-
-INSERT INTO `locataires` (`id_locataire`, `nomLoc`, `prenomLoc`, `mailLoc`, `mdpLoc`, `dateNaiss`, `telLoc`) VALUES
-(9, 'Unal', 'Can', 'unalcan611@gmail.com', '$2y$10$b0kY7jHMp60CrI3.CZi74OUPhERsAyPQgYeb5.v9pBPPCoSNd8mS2', '2003-07-28', '0767470436');
-
 -- --------------------------------------------------------
 
 --
@@ -157,12 +115,6 @@ CREATE TABLE `notification` (
   `id_dem` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `notification`
---
-
-INSERT INTO `notification` (`id_notification`, `message`, `date_notif`, `id_proprietaire`, `id_dem`) VALUES
-(11, 'Vous avez une demande sur l\'appartement à Sylvéria', '2025-04-07 09:15:09', 1, 57);
 
 -- --------------------------------------------------------
 
@@ -191,14 +143,6 @@ CREATE TABLE `proprietaires` (
   `ville` varchar(50) DEFAULT NULL,
   `tel` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `proprietaires`
---
-
-INSERT INTO `proprietaires` (`id_proprietaire`, `nom`, `prenom`, `mail`, `mdp`, `adresse`, `ville`, `tel`) VALUES
-(1, 'Unal', 'Can', 'unalcan611@gmail.com', '$2y$10$yyfZs3yHDCHy.wiBxxyLou0kDacJEqAiR342VA.TDKgfwlPayeL66', '9 avenue de la villageoise', 'Bondy', '0767470436'),
-(6, 'Unal', 'Can', 'canunal9314@gmail.com', '$2y$10$vLz28XH5xQ.b1chHzC9ZOuUC8kjSdKHTQ7sJFVQjyNcanjWpAV6Wm', '35 allée des platanes', 'Les Pavillons-sous-bois', '0767470436');
 
 --
 -- Indexes for dumped tables
